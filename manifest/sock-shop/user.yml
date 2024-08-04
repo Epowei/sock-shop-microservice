@@ -21,11 +21,11 @@ spec:
         image: weaveworksdemos/user:0.4.6
         resources:
           limits:
-            cpu: 500m
-            memory: 500Mi
+            cpu: 300m
+            memory: 200Mi
           requests:
             cpu: 100m
-            memory: 300Mi
+            memory: 100Mi
         ports:
         - containerPort: 80
         env:
@@ -44,14 +44,14 @@ spec:
           httpGet:
             path: /health
             port: 80
-          initialDelaySeconds: 600
-          periodSeconds: 10
+          initialDelaySeconds: 300
+          periodSeconds: 3
         readinessProbe:
           httpGet:
             path: /health
             port: 80
-          initialDelaySeconds: 600
-          periodSeconds: 10
+          initialDelaySeconds: 180
+          periodSeconds: 3
       nodeSelector:
         beta.kubernetes.io/os: linux
 
@@ -60,7 +60,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: user
+  name: user-svc
   annotations:
         prometheus.io/scrape: 'true'
   labels:
