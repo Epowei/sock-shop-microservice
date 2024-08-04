@@ -1,0 +1,43 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: sock-shop
+  annotations:
+    net.beta.kubernetes.io/network-policy: |
+      {
+        "ingress": {
+          "isolation": "DefaultDeny"
+        }
+      }
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: monitoring
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: kube-system
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: argocd
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ingress-nginx
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: cert-manager
+ 

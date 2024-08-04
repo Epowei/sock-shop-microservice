@@ -1,0 +1,11 @@
+# Ignore specific workflow YAML files in the root folder
+/workflow1.yaml
+/workflow2.yaml
+
+# Ignore specific Terraform state and lock files in the terraform/root directory
+/terraform/root/terraform.tfstate.backup
+/terraform/root/terraform.tfstate
+/terraform/root/.terraform.lock.hcl
+
+# Ignore the entire .terraform directory in the terraform/root directory
+/terraform/root/.terraform/
