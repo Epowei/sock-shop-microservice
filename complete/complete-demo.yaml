@@ -265,7 +265,7 @@ spec:
     spec:
       containers:
       - name: front-end
-        image: weaveworksdemos/front-end:blue-buttons
+        image: weaveworksdemos/front-end:red-buttons
         resources:
           limits:
             cpu: 300m
