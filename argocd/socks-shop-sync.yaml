@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/Epowei/sock-shop-microservice.git
     targetRevision: HEAD
-    path: ./manifest/sock-shop
+    path: ./complete
   destination: 
     server: https://kubernetes.default.svc
     namespace: sock-shop
